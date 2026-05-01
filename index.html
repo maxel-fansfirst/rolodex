@@ -731,8 +731,29 @@
 
     /* ── Responsive ── */
     @media (max-width: 700px) {
-      header { gap: 10px; }
-      #search { width: 130px; }
+      header { gap: 8px; padding: 0 12px; overflow: hidden; }
+
+      /* Fix 1: prevent contact count from wrapping below the title */
+      header h1 { white-space: nowrap; min-width: 0; }
+
+      /* Fix 2: shrink search and collapse buttons to icon-only so nothing overflows */
+      #search {
+        width: 90px;
+        /* Fix 3: remove Safari's blue search decoration */
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      #search::-webkit-search-decoration,
+      #search::-webkit-search-cancel-button,
+      #search::-webkit-search-results-button,
+      #search::-webkit-search-results-decoration { display: none; }
+
+      #add-btn { font-size: 0; padding: 7px 11px; letter-spacing: 0; }
+      #add-btn::before { content: "+"; font-size: 1.1rem; }
+
+      .btn-smart-add { font-size: 0; padding: 7px 11px; letter-spacing: 0; }
+      .btn-smart-add::before { content: "✦"; font-size: 0.9rem; }
+
       .layout { padding: 12px 8px; gap: 8px; }
       .label-sidebar { display: none; }
       .alpha-nav { display: none; }
