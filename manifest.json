@@ -2,7 +2,7 @@
   "name": "Rolodex",
   "short_name": "Rolodex",
   "description": "Personal contact manager",
-  "start_url": "./rolodex.html",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#f5f4f0",

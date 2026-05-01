@@ -1,7 +1,8 @@
 // Rolodex Service Worker
 const CACHE = 'rolodex-v1';
 const ASSETS = [
-  './rolodex.html',
+  './index.html',
+  './',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
